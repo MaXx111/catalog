@@ -6,12 +6,12 @@ interface ItemProps {
 
 export function Item({data} :ItemProps) {
 
-    let title = data.title.length > 50 ? data.title?.slice(0, 50).concat('...') : data.title;
+    let title = data.title!.length > 50 ? data.title?.slice(0, 50).concat('...') : data.title;
 
     let classForQuantity
-    if (data.quantity <= 20) classForQuantity = 'level-medium';
-    if (data.quantity <= 10) classForQuantity = 'level-low';
-    if (data.quantity > 20) classForQuantity = 'level-high';
+    if (data.quantity! <= 20) classForQuantity = 'level-medium';
+    if (data.quantity! <= 10) classForQuantity = 'level-low';
+    if (data.quantity! > 20) classForQuantity = 'level-high';
 
     let usdOrEur = undefined
 
