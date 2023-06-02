@@ -5,7 +5,7 @@ interface CatalogProps {
     items: IProduct[]
 }
 
-export function Catalog({items = []} : CatalogProps) {
+export function Catalog( {items = [] } : CatalogProps) {
     
     return (
         <div className="item-list">
